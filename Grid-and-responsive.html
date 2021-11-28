@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid+responsive</title>
+
+    <style>
+        #container {
+            display: grid;
+            grid-template-areas: 
+            'head head head'
+            'introduction introduction side-bar'
+            'header1 header2 header2'
+            'header3 header3 header3'
+            'footer footer footer' ;
+            
+        }
+/* this part is critical to work */
+        #head {
+        grid-area: head;
+        text-align: center;
+        }
+
+        #introduction {
+            grid-area: introduction;
+        }
+
+        #side-bar {
+            grid-area: side-bar;
+        }
+
+        #header1 {grid-area: header1;}
+        #header2 {grid-area: header2;}
+        #header3 {grid-area: header3;}
+
+        #footer {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        #head,
+         #introduction,
+          #side-bar ,
+          #header1,
+           #header2,
+            #header3,
+             #footer {
+            border: 1px solid black;
+            padding: 1rem;
+            margin: 2px;
+            
+        }
+
+        @media(max-width: 500px) {
+            #container {
+            display: grid;
+            grid-template-areas: 
+            'head'
+            'introduction'
+            'side-bar'
+            'header1'
+            'header2'
+            'header3'
+            'footer' ;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="head">
+            <h1>This is my website </h1>
+            
+        </header>
+        
+        <div id="introduction">
+            <h3>introduction</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat tempore voluptatem laborum, iste reprehenderit alias doloremque rerum nihil dolor autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam cupiditate dolorem expedita laboriosam veritatis exercitationem accusantium? Maxime, numquam, qui consequatur corporis sunt necessitatibus accusantium voluptates hic mollitia aperiam quos velit.</p>
+        </div>
+
+        <aside id="side-bar">
+            <h3>side bar</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta reiciendis dignissimos tempora aliquam architecto illum reprehenderit illo molestias quidem deserunt. Consectetur provident delectus exercitationem rem.</p>
+        </aside>
+
+        <div id="header1">
+            <h3>header1 </h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, culpa!
+        </div>
+        <div id="header2">
+            <h3>header2</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, culpa!
+        </div>
+        <div id="header3">
+            <h3>header3</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, culpa!
+        </div>
+
+        <footer id="footer">
+            <p>copyright &copy 2021. All rights reserved</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
